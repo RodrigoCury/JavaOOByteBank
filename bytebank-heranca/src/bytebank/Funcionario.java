@@ -7,6 +7,10 @@ public class Funcionario {
 	protected double salario;
 
 	public Funcionario(String nome, String cpf, double salario) {
+		// Para impedir a classe de ser instanciada
+//		if(this instanceof Funcionario) {
+//			throw new Exception("Funcionario não pode ser instanciado");
+//		}
 		this.setCpf(cpf);
 		this.setNome(nome);
 		this.setSalario(salario);
