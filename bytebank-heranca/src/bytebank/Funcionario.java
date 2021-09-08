@@ -1,10 +1,10 @@
 package bytebank;
 
 public class Funcionario {
-	static int totalFuncionarios;
-	private String nome;
-	private String cpf;
-	private double salario;
+	public static int totalFuncionarios;
+	protected String nome;
+	protected String cpf;
+	protected double salario;
 
 	public Funcionario(String nome, String cpf, double salario) {
 		this.setCpf(cpf);
