@@ -1,7 +1,7 @@
 package bytebank;
 
 public class Funcionario {
-	
+	static int totalFuncionarios;
 	private String nome;
 	private String cpf;
 	private double salario;
@@ -10,6 +10,7 @@ public class Funcionario {
 		this.setCpf(cpf);
 		this.setNome(nome);
 		this.setSalario(salario);
+		totalFuncionarios++;
 	}
 	
 	public double getBonificacao() {

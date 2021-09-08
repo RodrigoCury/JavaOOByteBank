@@ -8,6 +8,10 @@ public class Main {
 		
 		Gerente nico = new Gerente("Nico", "000.000.000-11", 1000.0, 1234);
 		System.out.println(nico.autentica(1234));
+		
+		// Todos tem acesso a mesma informação
+		System.out.println(Funcionario.totalFuncionarios);
+		System.out.println(Gerente.totalFuncionarios);
 	}
 
 }
