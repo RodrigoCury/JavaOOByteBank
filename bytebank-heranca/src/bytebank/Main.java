@@ -12,6 +12,8 @@ public class Main {
 		// Todos tem acesso a mesma informação
 		System.out.println(Funcionario.totalFuncionarios);
 		System.out.println(Gerente.totalFuncionarios);
+		
+		System.out.println(nico.getBonificacao());
 	}
 
 }
