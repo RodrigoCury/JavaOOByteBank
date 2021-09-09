@@ -6,16 +6,12 @@ public class Conta {
 	private int agencia;
 	private int numero;
 	private Cliente titular;
-	
-	public Conta(int agencia, int numero, Cliente titular) throws Exception {
+
+	public Conta(int agencia, int numero, Cliente titular) {
 		this.setAgencia(agencia);
 		this.numero = numero;
 		this.titular = titular;
 		totalDeContas++;
-  }	
-  
-	public double getSaldo() {
-		return this.saldo;
 	}
 
 	public boolean sacar(double valorASerSacado) {
@@ -32,31 +28,28 @@ public class Conta {
 		}
 	}
 
-	public void meMostra() {
-		System.out.println("Agência: " + this.agencia);
-		System.out.println("Titular: " + this.titular.getNome());
-		System.out.println("Numero: " + this.numero);
-		System.out.println("Saldo: " + this.saldo);
-	}
-
 	public boolean transfere(double valorATransferir, Conta contaRecebedora) {
 		if (valorATransferir <= this.saldo && valorATransferir > 0.0) {
-			this.saldo -= valorATransferir;
-			contaRecebedora.saldo += valorATransferir;
+			this.sacar(valorATransferir);
+			contaRecebedora.sacar(valorATransferir);
 			return true;
 		}
 		return false;
+	}
+
+	public double getSaldo() {
+		return this.saldo;
 	}
 
 	public int getAgencia() {
 		return agencia;
 	}
 
-	public void setAgencia(int agencia) throws Exception {
+	public void setAgencia(int agencia) {
 		if (agencia > 0 && agencia < 100)
 			this.agencia = agencia;
 		else
-			throw new Exception("Agência não existe");
+			System.out.println("Impossível fazer saque");
 	}
 
 	public int getNumero() {
@@ -73,5 +66,14 @@ public class Conta {
 
 	public static int getTotalDeContas() {
 		return totalDeContas;
+	}
+	
+	public void meMostra() {
+		System.out.println("Agência: " + this.agencia);
+		System.out.println("Titular: " + this.titular.getNome());
+		System.out.println("Numero: " + this.numero);
+		System.out.println("Saldo: R$" + this.saldo);
+		System.out.println(this.getClass());
+		System.out.println();
 	}
 }
