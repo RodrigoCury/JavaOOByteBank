@@ -1,4 +1,6 @@
-package bytebank;
+package Funcionarios;
+
+import Interfaces.Autenticavel;
 
 public class Administrador extends Funcionario implements Autenticavel{
 	
@@ -10,7 +12,7 @@ public class Administrador extends Funcionario implements Autenticavel{
 	}
 
 	@Override
-	double getBonificacao() {
+	public double getBonificacao() {
 		return this.salario * 0.5;
 	}
 

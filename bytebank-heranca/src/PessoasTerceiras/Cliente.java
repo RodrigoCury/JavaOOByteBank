@@ -1,4 +1,6 @@
-package bytebank;
+package PessoasTerceiras;
+
+import Interfaces.Autenticavel;
 
 public class Cliente implements Autenticavel {
 	

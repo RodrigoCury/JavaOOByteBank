@@ -1,4 +1,6 @@
-package bytebank;
+package Controle;
+
+import Interfaces.Autenticavel;
 
 public class SistemaInterno {
 	

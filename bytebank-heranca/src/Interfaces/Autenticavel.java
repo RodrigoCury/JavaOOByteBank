@@ -1,4 +1,4 @@
-package bytebank;
+package Interfaces;
 
 // contrato Autenticavel
 	// Quem Assina precisa implementar os métodos abstratos	

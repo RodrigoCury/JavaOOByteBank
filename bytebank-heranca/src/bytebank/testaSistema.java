@@ -1,5 +1,11 @@
 package bytebank;
 
+import Controle.SistemaInterno;
+import Funcionarios.Administrador;
+import Funcionarios.Diretor;
+import Funcionarios.EditorDeVideo;
+import Funcionarios.Gerente;
+
 public class testaSistema {
 
 	public static void main(String[] args) {
