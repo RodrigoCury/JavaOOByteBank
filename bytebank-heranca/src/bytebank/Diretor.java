@@ -1,16 +1,29 @@
 package bytebank;
 
-public class Diretor extends FuncionarioAutenticavel {
+public class Diretor extends Funcionario implements Autenticavel {
+
+	private int senha;
 
 	public Diretor(String nome, String cpf, double salario, int senha) {
-		super(nome, cpf, salario, senha);
-		// TODO Auto-generated constructor stub
+		super(nome, cpf, salario);
+		this.senha = senha;
 	}
 
 	@Override
 	double getBonificacao() {
-		// TODO Auto-generated method stub
-		return this.salario * 2.0;
+		return this.salario;
+	}
+
+	@Override
+	public void setSenha(int senhaNova) {
+		this.senha = senhaNova;
+	}
+
+	@Override
+	public boolean autentica(int senha) {
+		if (senha == this.senha)
+			return true;
+		return false;
 	}
 
 }
