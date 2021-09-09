@@ -1,27 +1,15 @@
 package bytebank;
 
-public class Gerente extends Funcionario {
+public class Gerente extends FuncionarioAutenticavel {
 	
-	private int senha;
 
 	public Gerente(String nome, String cpf, double salario, int senha) {
-		super(nome, cpf, salario);
-		this.senha = senha;
+		super(nome, cpf, salario, senha);
 	}
-	
-	public boolean autentica(int senha) {
-		if (senha == this.senha)
-			return true;
-		return false;
-	}
-	
+
 	@Override
 	public double getBonificacao() {
 		return this.getSalario();
 	}
 	
-	public void setSenha(int senha) {
-		this.senha = senha;
-	}
-
 }
