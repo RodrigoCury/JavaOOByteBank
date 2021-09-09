@@ -1,8 +1,8 @@
 package byteBank;
 
-public class Conta {
+public abstract class Conta {
 	private static int totalDeContas = 0;
-	private double saldo = 0;
+	protected double saldo = 0;
 	private int agencia;
 	private int numero;
 	private Cliente titular;
@@ -22,11 +22,7 @@ public class Conta {
 		return false;
 	}
 
-	public void depositar(double valorADepositar) {
-		if (valorADepositar > 0) {
-			this.saldo += valorADepositar;
-		}
-	}
+	public abstract void depositar(double valorADepositar);
 
 	public boolean transfere(double valorATransferir, Conta contaRecebedora) {
 		if (valorATransferir <= this.saldo && valorATransferir > 0.0) {
@@ -40,7 +36,7 @@ public class Conta {
 	public double getSaldo() {
 		return this.saldo;
 	}
-
+	
 	public int getAgencia() {
 		return agencia;
 	}
