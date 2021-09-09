@@ -1,4 +1,4 @@
-package bytebank;
+package funcionarios;
 
 public class Designer extends Funcionario {
 
@@ -7,7 +7,7 @@ public class Designer extends Funcionario {
 	}
 
 	@Override
-	double getBonificacao() {
+	public double getBonificacao() {
 		return super.getSalario() * .20;
 	}
 

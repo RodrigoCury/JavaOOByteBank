@@ -1,4 +1,6 @@
-package byteBank;
+package contas;
+
+import clientes.Cliente;
 
 public abstract class Conta {
 	private static int totalDeContas = 0;

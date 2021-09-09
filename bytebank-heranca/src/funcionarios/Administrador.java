@@ -1,14 +1,13 @@
-package bytebank;
+package funcionarios;
 
-public class Administrador extends FuncionarioAutenticavel {
-
+public class Administrador extends FuncionarioAutenticavel{
+	
 	public Administrador(String nome, String cpf, double salario, int senha) {
 		super(nome, cpf, salario, senha);
 	}
 
 	@Override
-	double getBonificacao() {
-		// TODO Auto-generated method stub
+	public double getBonificacao() {
 		return this.salario * 0.5;
 	}
 

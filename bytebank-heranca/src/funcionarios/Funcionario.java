@@ -1,4 +1,4 @@
-package bytebank;
+package funcionarios;
 
 public abstract class Funcionario {
 	public static int totalFuncionarios;
@@ -17,7 +17,7 @@ public abstract class Funcionario {
 		totalFuncionarios++;
 	}
 	
-	abstract double getBonificacao();
+	public abstract double getBonificacao();
 
 	public String getNome() {
 		return nome;

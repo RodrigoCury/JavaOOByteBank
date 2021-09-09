@@ -1,5 +1,8 @@
 package bytebank;
 
+import funcionarios.Funcionario;
+import funcionarios.Gerente;
+
 public class Main {
 
 	public static void main(String[] args) {

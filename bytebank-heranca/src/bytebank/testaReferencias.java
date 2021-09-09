@@ -1,5 +1,10 @@
 package bytebank;
 
+import controle.ControleBonificacao;
+import funcionarios.EditorDeVideo;
+import funcionarios.Funcionario;
+import funcionarios.Gerente;
+
 public class testaReferencias {
 
 	@SuppressWarnings("unused")

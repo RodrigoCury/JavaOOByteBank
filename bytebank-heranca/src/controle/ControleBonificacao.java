@@ -1,4 +1,6 @@
-package bytebank;
+package controle;
+
+import funcionarios.Funcionario;
 
 public class ControleBonificacao {
 

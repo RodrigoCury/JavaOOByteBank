@@ -1,10 +1,12 @@
-package bytebank;
+package controle;
+
+import interfaces.Autenticavel;
 
 public class SistemaInterno {
 	
 	private int senha = 1234;
 
-	public void autentica(FuncionarioAutenticavel fa) {
+	public void autentica(Autenticavel fa) {
 		boolean autenticou = fa.autentica(this.senha);
 		
 		if (autenticou) {

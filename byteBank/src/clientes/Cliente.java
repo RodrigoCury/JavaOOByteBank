@@ -1,4 +1,4 @@
-package byteBank;
+package clientes;
 
 public class Cliente {
 	

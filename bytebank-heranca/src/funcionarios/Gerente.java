@@ -1,7 +1,6 @@
-package bytebank;
+package funcionarios;
 
-public class Gerente extends FuncionarioAutenticavel {
-	
+public class Gerente extends FuncionarioAutenticavel{
 
 	public Gerente(String nome, String cpf, double salario, int senha) {
 		super(nome, cpf, salario, senha);
@@ -9,7 +8,7 @@ public class Gerente extends FuncionarioAutenticavel {
 
 	@Override
 	public double getBonificacao() {
-		return this.getSalario();
+		return this.salario;
 	}
-	
+
 }

@@ -1,10 +1,17 @@
-package byteBank;
+package contas;
 
-public class ContaCorrente extends Conta {
+import clientes.Cliente;
+import interfaces.Tributavel;
+
+public class ContaCorrente extends Conta implements Tributavel{
 
 	public ContaCorrente(int agencia, int numero, Cliente titular) {
 		super(agencia, numero, titular);
-
+	}
+	
+	@Override
+	public double getValorImposto() {
+		return this.saldo * 0.02;
 	}
 	
 	@Override
