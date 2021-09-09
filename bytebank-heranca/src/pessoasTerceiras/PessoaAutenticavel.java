@@ -1,14 +1,13 @@
-package funcionarios;
+package pessoasTerceiras;
 
 import interfaces.Autenticavel;
 import utils.AutenticacaoUtil;
 
-abstract class FuncionarioAutenticavel extends Funcionario implements Autenticavel{
-	
+public class PessoaAutenticavel implements Autenticavel{
+
 	private AutenticacaoUtil autenticacaoUtil;
-	
-	public FuncionarioAutenticavel(String nome, String cpf, double salario, int senha) {
-		super(nome, cpf, salario);
+
+	public PessoaAutenticavel(int senha) {
 		this.autenticacaoUtil = new AutenticacaoUtil(senha);
 	}
 
@@ -23,4 +22,3 @@ abstract class FuncionarioAutenticavel extends Funcionario implements Autenticav
 	}
 
 }
-
