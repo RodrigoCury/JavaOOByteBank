@@ -1,4 +1,6 @@
-package byteBank;
+package contas;
+
+import clientes.Cliente;
 
 public class ContaCorrente extends Conta {
 

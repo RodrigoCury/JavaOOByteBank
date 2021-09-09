@@ -1,5 +1,9 @@
 package byteBank;
 
+import clientes.Cliente;
+import contas.ContaCorrente;
+import contas.ContaPoupanca;
+
 public class testaConta {
 
 	public static void main(String[] args) {
