@@ -1,6 +1,6 @@
 package bytebank;
 
-public class Funcionario {
+public abstract class Funcionario {
 	public static int totalFuncionarios;
 	protected String nome;
 	protected String cpf;
@@ -17,9 +17,7 @@ public class Funcionario {
 		totalFuncionarios++;
 	}
 	
-	public double getBonificacao() {
-		return this.salario * 0.1;
-	}
+	abstract double getBonificacao();
 
 	public String getNome() {
 		return nome;

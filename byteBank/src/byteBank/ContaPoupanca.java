@@ -7,4 +7,12 @@ public class ContaPoupanca extends Conta {
 
 	}
 
+	@Override
+	public void depositar(double valorADepositar) {
+		if (valorADepositar > 0) 
+			this.saldo = valorADepositar + this.getSaldo(); 
+		else
+			System.out.println("impossível sacar");
+
+	}
 }
