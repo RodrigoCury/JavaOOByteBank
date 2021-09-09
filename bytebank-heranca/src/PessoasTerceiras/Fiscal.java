@@ -6,7 +6,7 @@ public class Fiscal implements Autenticavel{
 	
 	private int senha;
 
-	public Fiscal() {
+	public Fiscal(int senha) {
 		this.senha = senha;
 	}
 
