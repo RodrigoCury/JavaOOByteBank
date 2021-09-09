@@ -1,9 +1,9 @@
 package bytebank;
 
-import Controle.ControleBonificacao;
-import Funcionarios.EditorDeVideo;
-import Funcionarios.Funcionario;
-import Funcionarios.Gerente;
+import controle.ControleBonificacao;
+import funcionarios.EditorDeVideo;
+import funcionarios.Funcionario;
+import funcionarios.Gerente;
 
 public class testaReferencias {
 

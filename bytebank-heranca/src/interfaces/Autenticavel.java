@@ -1,4 +1,4 @@
-package Interfaces;
+package interfaces;
 
 // contrato Autenticavel
 	// Quem Assina precisa implementar os métodos abstratos	

@@ -1,4 +1,4 @@
-package Funcionarios;
+package funcionarios;
 
 public abstract class Funcionario {
 	public static int totalFuncionarios;

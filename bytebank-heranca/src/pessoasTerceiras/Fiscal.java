@@ -1,12 +1,12 @@
-package PessoasTerceiras;
+package pessoasTerceiras;
 
-import Interfaces.Autenticavel;
+import interfaces.Autenticavel;
 
-public class Cliente implements Autenticavel {
+public class Fiscal implements Autenticavel{
 	
 	private int senha;
 
-	public Cliente(int senha) {
+	public Fiscal(int senha) {
 		this.senha = senha;
 	}
 
@@ -24,3 +24,4 @@ public class Cliente implements Autenticavel {
 	}
 
 }
+

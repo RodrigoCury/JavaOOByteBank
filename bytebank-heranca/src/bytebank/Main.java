@@ -1,7 +1,7 @@
 package bytebank;
 
-import Funcionarios.Funcionario;
-import Funcionarios.Gerente;
+import funcionarios.Funcionario;
+import funcionarios.Gerente;
 
 public class Main {
 

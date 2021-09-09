@@ -1,9 +1,9 @@
 package bytebank;
 
-import Controle.SistemaInterno;
-import Funcionarios.Administrador;
-import Funcionarios.Diretor;
-import Funcionarios.Gerente;
+import controle.SistemaInterno;
+import funcionarios.Administrador;
+import funcionarios.Diretor;
+import funcionarios.Gerente;
 
 public class testaSistema {
 

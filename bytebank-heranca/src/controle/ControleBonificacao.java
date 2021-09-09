@@ -1,6 +1,6 @@
-package Controle;
+package controle;
 
-import Funcionarios.Funcionario;
+import funcionarios.Funcionario;
 
 public class ControleBonificacao {
 

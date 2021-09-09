@@ -1,6 +1,6 @@
-package Controle;
+package controle;
 
-import Interfaces.Autenticavel;
+import interfaces.Autenticavel;
 
 public class SistemaInterno {
 	
