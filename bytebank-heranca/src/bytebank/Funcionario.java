@@ -17,9 +17,7 @@ public abstract class Funcionario {
 		totalFuncionarios++;
 	}
 	
-	public double getBonificacao() {
-		return this.salario * 0.1;
-	}
+	abstract double getBonificacao();
 
 	public String getNome() {
 		return nome;

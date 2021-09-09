@@ -6,8 +6,9 @@ public class EditorDeVideo extends Funcionario {
 		super(nome, cpf, salario);
 	}
 	
+	@Override
 	public double getBonificacao() {
-		return super.getBonificacao() + this.salario * 0.01;
+		return this.getSalario() * 0.2;
 	}
 
 }
