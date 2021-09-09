@@ -1,6 +1,6 @@
 package bytebank;
 
-public class Funcionario {
+public abstract class Funcionario {
 	public static int totalFuncionarios;
 	protected String nome;
 	protected String cpf;
