@@ -1,5 +1,7 @@
 package contas;
 
+import Excecoes.SaldoInsuficienteException;
+import Excecoes.ValorInsuficienteException;
 import clientes.Cliente;
 
 public abstract class Conta {
@@ -16,23 +18,18 @@ public abstract class Conta {
 		totalDeContas++;
 	}
 
-	public boolean sacar(double valorASerSacado) {
-		if (valorASerSacado <= this.saldo && valorASerSacado > 0.0) {
-			this.saldo -= valorASerSacado;
-			return true;
+	public void sacar(double valorASerSacado) throws SaldoInsuficienteException{
+		if (valorASerSacado > this.saldo && valorASerSacado <= 0.0) {
+			throw new SaldoInsuficienteException();
 		}
-		return false;
+		this.saldo -= valorASerSacado;
 	}
 
-	public abstract void depositar(double valorADepositar);
+	public abstract void depositar(double valorADepositar) throws ValorInsuficienteException;
 
-	public boolean transfere(double valorATransferir, Conta contaRecebedora) {
-		if (valorATransferir <= this.saldo && valorATransferir > 0.0) {
-			this.sacar(valorATransferir);
-			contaRecebedora.sacar(valorATransferir);
-			return true;
-		}
-		return false;
+	public void transfere(double valorATransferir, Conta contaRecebedora) throws ValorInsuficienteException, SaldoInsuficienteException{
+		this.sacar(valorATransferir);
+		contaRecebedora.depositar(valorATransferir);
 	}
 
 	public double getSaldo() {

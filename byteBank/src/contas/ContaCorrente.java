@@ -1,5 +1,7 @@
 package contas;
 
+import Excecoes.SaldoInsuficienteException;
+import Excecoes.ValorInsuficienteException;
 import clientes.Cliente;
 import interfaces.Tributavel;
 
@@ -15,18 +17,16 @@ public class ContaCorrente extends Conta implements Tributavel{
 	}
 	
 	@Override
-	public void depositar(double valorADepositar) {
-		if (valorADepositar > 0) 
-			this.saldo = valorADepositar - 0.05 + this.getSaldo(); 
-		else
-			System.out.println("impossível sacar");
-		
+	public void depositar(double valorADepositar) throws ValorInsuficienteException{
+	if (valorADepositar <= 0.0)
+		throw new ValorInsuficienteException();
+	this.saldo = valorADepositar - 0.05 + this.getSaldo(); 	
 	}
 	
 	@Override // Compilador sabe da intenção de Sobreescrever Métodos e avisa erros
-	public boolean sacar(double valorASerSacado) {
+	public void sacar(double valorASerSacado) throws SaldoInsuficienteException {
 		valorASerSacado += 0.02;
-		return super.sacar(valorASerSacado);
+		super.sacar(valorASerSacado);
 	}
 
 	

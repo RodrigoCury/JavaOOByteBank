@@ -1,5 +1,6 @@
 package contas;
 
+import Excecoes.ValorInsuficienteException;
 import clientes.Cliente;
 
 public class ContaPoupanca extends Conta {
@@ -10,11 +11,9 @@ public class ContaPoupanca extends Conta {
 	}
 
 	@Override
-	public void depositar(double valorADepositar) {
-		if (valorADepositar > 0) 
-			this.saldo = valorADepositar + this.getSaldo(); 
-		else
-			System.out.println("impossível sacar");
-
+	public void depositar(double valorADepositar) throws ValorInsuficienteException{
+		if (valorADepositar <= 0) 
+			throw new ValorInsuficienteException();
+		this.saldo = valorADepositar + this.getSaldo(); 
 	}
 }
