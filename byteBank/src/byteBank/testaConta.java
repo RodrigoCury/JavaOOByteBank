@@ -3,7 +3,6 @@ package byteBank;
 import Seguros.SeguroDeVida;
 import clientes.Cliente;
 import contas.ContaCorrente;
-import contas.ContaPoupanca;
 
 public class testaConta {
 
