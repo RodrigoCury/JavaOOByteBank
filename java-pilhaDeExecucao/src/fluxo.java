@@ -17,6 +17,7 @@ public class fluxo {
 		System.out.println("fim do metodo1");		
 	}
 	
+	@SuppressWarnings("unused")
 	private static void metodo2() {
 		System.out.println("Inicio do metodo2");
 		for (int i = 0; i <= 5; i++){
